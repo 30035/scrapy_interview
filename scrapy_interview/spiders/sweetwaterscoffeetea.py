@@ -9,7 +9,7 @@ import scrapy_interview.utils as utils
 class SweetwaterscoffeeteaSpider(scrapy.Spider):
     name = "sweetwaterscoffeetea"
     #valid scrape_type values: html - single-page, html - multi-page, json - single-page, kml, selenium, other
-    scrape_type = "html - single-page" 
+    scrape_type = "html - single-page"
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
     }
@@ -52,5 +52,5 @@ class SweetwaterscoffeeteaSpider(scrapy.Spider):
             item["attributes"] = {
                 "DRIVETHRU":""
             }
-            
+
             yield item
